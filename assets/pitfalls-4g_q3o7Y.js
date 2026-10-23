@@ -1,0 +1,31 @@
+var e=[{id:`pit-01`,title:`BCD vs Pure Binary Representation Confusion`,trapDescription:`Decimal number ko BCD format mein convert karte waqt pure positional binary conversion use kar lena, ya vice versa.`,wrongApproach:`Decimal 25 ka BCD pucha jane par pure binary 11001_2 likh dena (jo 16 + 8 + 1 = 25 hota hai).`,correctApproach:`Strict distinction yaad rakhein: **Pure Binary** pure number ko powers of 2 mein represent karta hai (25 = 11001_2). **8421 BCD** har individual decimal digit ko alag se 4-bit nibble mein encode karta hai: Digit 2 = 0010, Digit 5 = 0101 -> 25_10 in BCD = 0010 0101_BCD. Exam mein question ka word 'BCD' dhyan se padhein.`,whyItHappens:`Candidates binary aur BCD shabdon ko interchangeably interpret kar lete hain.`,examQuestionExample:`What is the correct 8421 BCD representation of the decimal integer 25_10?
+(A) 11001
+(B) 00100101
+(C) 01010010
+(D) 10001
+[Correct Answer: B]`},{id:`pit-02`,title:`BCD Addition Correction Factor Confusion (+6 vs +3)`,trapDescription:`BCD addition mein invalid sum (> 9 ya carry) aane par +6 (0110_2) add karne ke bajaye Excess-3 ka +3 (0011_2) add kar dena.`,wrongApproach:`Question mein 'correction factor in BCD addition' aane par 3 ya 0011 mark kar dena.`,correctApproach:`Clear distinction yaad rakhein: BCD system mein 16 possible 4-bit states mein se sirf 10 states (0-9) valid hoti hain, jabki 6 states (10-15) invalid hoti hain. In **6 skipped invalid states** ko compensate karke decimal carry agle nibble mein bhejne ke liye **0110_2 (+6_10) ADD** kiya jata hai! 0011_2 (+3) Excess-3 code banane ke liye use hota hai, BCD addition correction ke liye nahi.`,whyItHappens:`Excess-3 aur BCD addition ek sath padhe jate hain jisse 3 aur 6 numbers aapas mein mix ho jate hain.`,examQuestionExample:`When the sum of two BCD digits exceeds 9 (1001_2) or produces a carry-out, what binary correction value must be added to obtain the correct BCD result?
+(A) 0011 (Decimal 3)
+(B) 0110 (Decimal 6)
+(C) 1001 (Decimal 9)
+(D) 1010 (Decimal 10)
+[Correct Answer: B]`},{id:`pit-03`,title:`Gray to Binary vs Binary to Gray XOR Algorithm Inversion`,trapDescription:`Gray-to-Binary reverse conversion karte waqt galti se Binary-to-Gray ka adjacent XOR rule apply kar dena.`,wrongApproach:`Gray code 1110 ko binary banate waqt Gray bits ko aapas mein XOR kar dena: G3 ⊕ G2 = 1 ⊕ 1 = 0.`,correctApproach:`Strict algorithms yaad rakhein: **Binary to Gray:** G_i = B_(i+1) ⊕ B_i (Adjacent binary bits ka XOR). **Gray to Binary:** B_i = B_(i+1) ⊕ G_i (Previous calculated binary bit ka current Gray bit ke sath DIAGONAL XOR). Dono ka MSB same rehta hai lekin subsequent bits ka source alag hota hai.`,whyItHappens:`Dono conversions Exclusive-OR gate use karti hain, jisse hurried exam setting mein candidate diagonal feedback ko miss kar dete hain.`,examQuestionExample:`When converting a 4-bit Gray code (G3 G2 G1 G0) back into its equivalent binary code (B3 B2 B1 B0), what is the correct boolean expression for bit B2?
+(A) B2 = G3 ⊕ G2
+(B) B2 = G2 ⊕ G1
+(C) B2 = B3 ⊕ G2
+(D) B2 = B3 ⊕ B1
+[Correct Answer: C]`},{id:`pit-04`,title:`8421 BCD Self-Complementing Fallacy`,trapDescription:`Yeh assume kar lena ki 8421 BCD ek self-complementing (reflective) code hai.`,wrongApproach:`Question mein 'Which of the following is a self-complementing code?' aane par 8421 BCD select kar lena.`,correctApproach:`Self-complementing theorem yaad rakhein: Kisi weighted code ke self-complementing hone ke liye uske weights ka sum **HAMESHA 9** hona chahiye. 8421 BCD mein weights ka sum = 8 + 4 + 2 + 1 = 15 != 9 hota hai, isliye 8421 BCD self-complementing **NAHI HOTA**! Standard self-complementing codes: **Excess-3 (XS-3)** aur **2421 (Aiken Code)** hote hain.`,whyItHappens:`BCD standard aur sabse popular decimal binary code hai, isliye students assume karte hain ki isme saari achhi properties hongi.`,examQuestionExample:`Which of the following binary codes is NOT a self-complementing code?
+(A) Excess-3 Code
+(B) 2421 Aiken Code
+(C) 84-2-1 Code
+(D) 8421 BCD Code
+[Correct Answer: D]`},{id:`pit-05`,title:`ASCII Decimal Range & Zero Offset Trap ('0' vs 'A' vs 'a')`,trapDescription:`ASCII character codes ko memorize karte waqt numeric digits aur alphabets ke base offsets ko mix kar dena.`,wrongApproach:`Digit '0' ka ASCII code 0 ya 1 maan lena, ya 'A' ka code 1 ya 97 maan lena.`,correctApproach:`Mandatory exam benchmarks permanently memorize karein: (1) **'0' (Digit Zero) = 48_10 (30_16)** [Range '0'-'9' is 48 to 57], (2) **'A' (Uppercase A) = 65_10 (41_16)** [Range 'A'-'Z' is 65 to 90], (3) **'a' (Lowercase a) = 97_10 (61_16)** [Range 'a'-'z' is 97 to 122], (4) **Space = 32_10 (20_16)**. Case difference: 'a' - 'A' = 97 - 65 = 32.`,whyItHappens:`Candidates human numerical intuition ('0' should be 0, 'A' should be 1) ko ASCII standards par impose kar dete hain.`,examQuestionExample:`What is the standard 7-bit ASCII decimal code for the character '0' (digit zero)?
+(A) 0
+(B) 32
+(C) 48
+(D) 65
+[Correct Answer: C]`},{id:`pit-06`,title:`Parity Bit Even-Error Detection Blindspot Trap`,trapDescription:`Yeh assume kar lena ki single Parity Bit transmission mein hone wale sabhi bit errors ko detect kar sakta hai.`,wrongApproach:`Question mein 'Can a single parity bit detect 2 bit flips?' aane par 'Yes' mark kar dena.`,correctApproach:`Parity bit ki mathematical limitation yaad rakhein: Parity bit sirf **ODD NUMBER OF BIT ERRORS (1, 3, 5 errors)** ko detect kar sakta hai. Agar transmission channel mein noise ke karan **EVEN NUMBER OF BITS (2, 4 errors)** flip ho jayein, to overall 1s ka count parity rule ko satisfy karta rahega aur error completely **UNDETECTED (chhip)** jayegi! Parity bit error correct bhi nahi kar sakta.`,whyItHappens:`Candidates 'Error Detection Code' ka matlab 'har tarah ka error detect karne wala' assume kar lete hain.`,examQuestionExample:`Under what condition will a standard single-bit parity check system completely FAIL to detect data transmission errors?
+(A) When a single bit flips from 0 to 1
+(B) When exactly three bits flip simultaneously
+(C) When an even number of bits (e.g. 2 bits) flip simultaneously
+(D) When the parity bit itself flips
+[Correct Answer: C]`}];export{e as default};

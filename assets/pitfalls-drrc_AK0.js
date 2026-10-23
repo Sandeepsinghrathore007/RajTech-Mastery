@@ -1,0 +1,37 @@
+var e=[{id:`pit-01`,title:`Difference Engine vs Analytical Engine Architectural Inversion`,trapDescription:`Candidates aksar Charles Babbage ke do landmark designs (Difference Engine aur Analytical Engine) ke purpose, features aur year mein confuse ho jate hain, aur Difference Engine ko world ka pehla general-purpose computer samajh lete hain.`,wrongApproach:`Question mein 'Mill aur Store' ya 'first programmable general-purpose computer concept' dekh kar bina soche 'Difference Engine' select kar lena.`,correctApproach:`Clear distinction yaad rakho: Difference Engine (1822) ek special-purpose machine thi jo sirf polynomial calculations aur mathematical tables banati thi. Analytical Engine (1837) pehla general-purpose programmable design tha jismein Mill (CPU) aur Store (Memory) ke modern concepts mojud the.`,whyItHappens:`Dono machines Charles Babbage ne design ki thin aur dono mechanical thin, isliye candidates inke functions ko interchange kar dete hain.`,examQuestionExample:`Which of the following designs proposed by Charles Babbage incorporated the concepts of a 'Mill' (processor) and a 'Store' (memory)?
+(A) Difference Engine
+(B) Analytical Engine
+(C) Stepped Reckoner
+(D) Tabulating Machine
+[Correct Answer: B]`},{id:`pit-02`,title:`First Electronic Computer Confusion: ABC vs ENIAC vs EDSAC`,trapDescription:`Exams mein 'First electronic digital computer', 'First general-purpose electronic computer', aur 'First practical stored-program computer' ke beech slight architectural wording hoti hai jismein 80% candidates galat option mark kar dete hain.`,wrongApproach:`Har sawal mein jahan 'electronic computer' likha ho wahan blindly 'ENIAC' select kar lena, bina yeh check kiye ki question mein 'stored-program' ya 'special-purpose prototype' likha hai.`,correctApproach:`Strict factual rules apply karo:
+1. First electronic digital calculating prototype = ABC (Atanasoff-Berry Computer, 1942).
+2. First fully functional general-purpose electronic digital computer = ENIAC (1946).
+3. First practical working stored-program electronic computer = EDSAC (Maurice Wilkes, 1949).
+4. First commercially produced computer = UNIVAC I (1951).`,whyItHappens:`Colloquial study guides mein teeno charo machines ko casually 'First Computer' bol diya jata hai, bina unki architectural category specify kiye.`,examQuestionExample:`Which computing system is recognized as the world's first operational electronic stored-program computer?
+(A) ENIAC
+(B) EDSAC
+(C) UNIVAC I
+(D) Harvard Mark I
+[Correct Answer: B]`},{id:`pit-03`,title:`Hybrid Computer Misconception: 2-in-1 Detachable Laptops`,trapDescription:`Everyday commercial marketing mein touch-screen laptop jo fold hokar tablet ban jata hai use '2-in-1 hybrid laptop' kaha jata hai. Is marketing term ki wajah se candidates computing architecture exam mein galat definition choose kar lete hain.`,wrongApproach:`'Hybrid Computer' ka matlab aisa computer samajhna jo laptop aur tablet dono ki tarah use ho sakta hai, ya jismein Windows aur Android dono OS run hote hain.`,correctApproach:`Computer architecture mein 'Hybrid' strictly operational signal principle par define hota hai: Analog continuous signal sensing (physical voltage/pressure) combined with Digital binary arithmetic processing & storage (using ADC and DAC). Examples: ICU Patient Monitor, Petrol Dispensing Unit.`,whyItHappens:`Consumer marketing jargon aur technical architectural classification ke beech semantic collision hota hai.`,examQuestionExample:`In computer architecture, a 'Hybrid Computer' refers to a system that:
+(A) Can run both Windows and Linux operating systems simultaneously
+(B) Functions as both a laptop and a handheld tablet
+(C) Combines the operational features of both analog and digital computers
+(D) Uses both optical storage and magnetic storage drives
+[Correct Answer: C]`},{id:`pit-04`,title:`Supercomputer Performance Metric Trap: MIPS vs FLOPS`,trapDescription:`Candidates general desktop CPU execution metric (MIPS / GHz) ko supercomputer speed metric samajh kar exam mein MIPS mark kar dete hain.`,wrongApproach:`Supercomputer ki performance ko MIPS (Million Instructions Per Second) ya clock speed (GHz) se evaluate karna.`,correctApproach:`Supercomputers pure mathematical aur scientific simulations solve karte hain jismein real numbers aur fractions ka calculation hota hai. Isliye inki speed universally FLOPS (Floating-Point Operations Per Second) mein measure hoti hai (GFLOPS, TFLOPS, PFLOPS, EFLOPS). MIPS standard general-purpose desktop/mainframe CPUs ke liye use hota hai.`,whyItHappens:`Microcomputer architecture padhte waqt MIPS frequently padha jata hai, isliye candidate wahi metric supercomputer par bhi generalize kar dete hain.`,examQuestionExample:`The computational processing speed of modern supercomputers is universally measured in:
+(A) MIPS (Million Instructions Per Second)
+(B) FLOPS (Floating-Point Operations Per Second)
+(C) MHz (Megahertz)
+(D) DPI (Dots Per Inch)
+[Correct Answer: B]`},{id:`pit-05`,title:`Father of Supercomputing: Global (Seymour Cray) vs Indian (Dr. Vijay Bhatkar)`,trapDescription:`Question stem mein 'Father of Supercomputing' pucha gaya hai ya 'Father of Indian Supercomputing' pucha gaya hai, is context ko overlook karne se candidates marks loose karte hain.`,wrongApproach:`'Father of Supercomputing' aate hi Dr. Vijay Bhatkar mark kar dena, ya 'Father of Indian Supercomputer' aane par Seymour Cray select kar lena.`,correctApproach:`Question ko carefully parse karo:
+- 'Father of Supercomputing' (Global / Universal) = Seymour Cray (CDC 6600, Cray-1 designer).
+- 'Father of Indian Supercomputing' (National context) = Dr. Vijay P. Bhatkar (C-DAC founding director, architect of PARAM 8000).`,whyItHappens:`Rushed reading ke dauran 'Indian' keyword miss ho jata hai.`,examQuestionExample:`Who is universally regarded as the 'Father of Supercomputing' for developing the CDC 6600 and Cray-1 systems?
+(A) Dr. Vijay P. Bhatkar
+(B) Seymour Cray
+(C) John von Neumann
+(D) Alan Turing
+[Correct Answer: B]`},{id:`pit-06`,title:`Minicomputer vs Microcomputer Sizing Inversion`,trapDescription:`English language mein prefix 'Mini' ka matlab chhota hota hai, jabki 'Micro' ka matlab bahut chhota hota hai. Lekin historical computing categorization mein candidates galat assume kar lete hain ki Minicomputer microcomputer se chhota hota hai.`,wrongApproach:`Yeh sochna ki Minicomputer < Microcomputer, aur PDA ya smartphone ko minicomputer samajh lena.`,correctApproach:`Historical computing hierarchy strictly follows: Microcomputer (single-user PC, laptop, phone) < Minicomputer (multi-user midrange server cabinet like PDP-11 supporting 10-100 users) < Mainframe (enterprise core) < Supercomputer. Minicomputer hamesha Microcomputer se bada aur powerful hota hai.`,whyItHappens:`General English vocabulary intuition technical historical taxonomy se contradict karti hai.`,examQuestionExample:`Which of the following correctly arranges digital computers in ascending order of their physical size and typical multi-user capacity?
+(A) Mainframe < Supercomputer < Minicomputer < Microcomputer
+(B) Microcomputer < Minicomputer < Mainframe < Supercomputer
+(C) Minicomputer < Microcomputer < Mainframe < Supercomputer
+(D) Microcomputer < Mainframe < Minicomputer < Supercomputer
+[Correct Answer: B]`}];export{e as default};

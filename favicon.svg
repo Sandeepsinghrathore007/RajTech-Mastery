@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient (Deep Forest Teal to Midnight Slate) -->
+    <linearGradient id="rp-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#042f2e" />
+      <stop offset="45%" stop-color="#08232c" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Outer Border Glow Gradient -->
+    <linearGradient id="rp-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.75" />
+      <stop offset="50%" stop-color="#14b8a6" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.6" />
+    </linearGradient>
+
+    <!-- Teal Gradient for Stem & Loop (Tech Track) -->
+    <linearGradient id="rp-teal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5eead4" />
+      <stop offset="40%" stop-color="#2dd4bf" />
+      <stop offset="100%" stop-color="#0d9488" />
+    </linearGradient>
+
+    <!-- Amber Gold Gradient for Dynamic Forward Kick (GK & Prep Track) -->
+    <linearGradient id="rp-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="25%" stop-color="#fbbf24" />
+      <stop offset="70%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+
+    <!-- Star of Excellence Gradient -->
+    <linearGradient id="rp-star" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#fde047" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+
+    <!-- Ambient Teal Glow Filter -->
+    <radialGradient id="rp-ambient-teal" cx="30%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#14b8a6" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Ambient Amber Glow Filter -->
+    <radialGradient id="rp-ambient-amber" cx="75%" cy="80%" r="45%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- 1. Squircle Canvas Background -->
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#rp-bg)" />
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#rp-ambient-teal)" />
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#rp-ambient-amber)" />
+
+  <!-- Crisp Modern Border -->
+  <rect x="5.25" y="5.25" width="117.5" height="117.5" rx="26.75" fill="none" stroke="url(#rp-border)" stroke-width="2.5" />
+
+  <!-- 2. "R" Monogram - Vertical Stem (Teal) -->
+  <rect x="28" y="26" width="16" height="76" rx="8" fill="url(#rp-teal)" />
+
+  <!-- 3. "R" Monogram - Upper Loop (Teal) -->
+  <!-- Outer loop connects at x=44, arches smoothly to x=96, returns to x=44 -->
+  <path d="M 44 26 H 70 C 86.5 26 98 37.5 98 51 C 98 64.5 86.5 76 70 76 H 44 V 62 H 68 C 75 62 82 57.5 82 51 C 82 44.5 75 40 68 40 H 44 Z" fill="url(#rp-teal)" />
+
+  <!-- 4. "R" Monogram - Dynamic Forward Kick (Warm Amber Gold) -->
+  <!-- Forward prompt/chevron angle symbolizing velocity, exam prep & victory -->
+  <path d="M 56 66 L 74 66 L 98.5 94.5 C 101.5 98 99 102 94.5 102 L 78 102 C 75 102 72 100 70 96 L 53.5 73.5 C 51.5 70 53 66 56 66 Z" fill="url(#rp-amber)" />
+
+  <!-- 5. Rajasthan Excellence Star (Golden 4-Point Star of Top Ranks) -->
+  <path d="M 104 17 C 104 22 107.5 25.5 112.5 25.5 C 107.5 25.5 104 29 104 34 C 104 29 100.5 25.5 95.5 25.5 C 100.5 25.5 104 22 104 17 Z" fill="url(#rp-star)" />
+  <circle cx="104" cy="25.5" r="1.5" fill="#ffffff" />
+</svg>
